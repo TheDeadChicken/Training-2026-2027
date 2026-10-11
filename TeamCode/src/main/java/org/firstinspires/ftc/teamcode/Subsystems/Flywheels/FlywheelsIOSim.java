@@ -5,7 +5,12 @@ public class FlywheelsIOSim implements FlywheelsIO {
     public FlywheelsIOSim() {}
 
     @Override
-    public void UpdateInputs(FlywheelsIOInputs inputs) {}
+    public void UpdateInputs(FlywheelsIOInputs inputs) {
         inputs.upvolts = appliedVolts;
-        inputs.lowvolts = appliedVolts;
+        inputs.lowvolts = -appliedVolts;
+    }
+
+    @Override void RunVolts(double volts) {
+        appliedVolts = volts;
+    }
 }
