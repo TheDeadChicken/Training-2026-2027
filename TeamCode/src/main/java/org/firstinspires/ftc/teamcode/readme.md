@@ -1,5 +1,27 @@
 ## TeamCode Module
 
+
+boring ugly, EW
+
+
+that's smoother 
+
+oh yeah it's everywhere
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Welcome!
 
 This module, TeamCode, is the place where you will write/paste the code for your team's
