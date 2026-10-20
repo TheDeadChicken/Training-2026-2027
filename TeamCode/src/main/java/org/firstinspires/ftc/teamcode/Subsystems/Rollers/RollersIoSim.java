@@ -1,4 +1,4 @@
-public class RollersIoSim implements RollersIO{
+public class RollersIOSim implements RollersIO{
     public  double appliedVolts = 0;
     
     public RollerIOSim() {}
