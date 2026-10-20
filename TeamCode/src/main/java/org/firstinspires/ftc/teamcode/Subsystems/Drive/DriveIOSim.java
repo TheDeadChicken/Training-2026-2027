@@ -16,7 +16,7 @@ public class DriveIOSim {
     }
 
     @Override
-    public void RunVolts(double frontRightVolts, double frontLeftVolts, double backRightVolts, double backLeftVolts) {
+    public void RunVolts(double frontRightVolts, double backRightVolts, double frontLeftVolts, double backLeftVolts) {
         appliedFrontRightVolts = frontRightVolts;
         appliedFrontLeftVolts = frontLeftVolts;
         appliedBackRightVolts = backRightVolts;
