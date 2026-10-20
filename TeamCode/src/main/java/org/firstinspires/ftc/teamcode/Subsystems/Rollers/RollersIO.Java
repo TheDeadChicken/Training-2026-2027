@@ -5,7 +5,7 @@ public interface RollersIO {
         public double volts;   
     }
 
-    public default void UpdateInputs(RollersIOInputs inputs) {}
+    public default void UpdateInputs() {}
 
-    public default void RunVolts(double volts) {}
+    public default void RunVolts() {}
 }
