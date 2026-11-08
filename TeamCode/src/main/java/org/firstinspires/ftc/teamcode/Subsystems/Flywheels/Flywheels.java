@@ -11,10 +11,10 @@ public class Flywheels extends Subsytems {
     }
 
     public Command runVoltsFast(){
-        return run(()-> io.RunVolts(19));
+        return run(()-> io.RunVolts(19, 19));
     }
 
     public Command runNoVolts(){
-        return run(()-> io.RunVolts(0));
+        return run(()-> io.RunVolts(0, 0));
     }
 }

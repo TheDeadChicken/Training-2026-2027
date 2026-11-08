@@ -1,18 +1,18 @@
 public class FlywheelsIOSim implements FlywheelsIO{
-    private double upperAppliedVolts = 0;
-    private double lowerAppliedVolts = 0;
+    private double frontAppliedVolts = 0;
+    private double backAppliedVolts = 0;
 
     public FlywheelsIOSim() {}
 
     @Override
     public void updateInputs(FlywheelsIOInputs inputs) {
-        inputs.upperVolts = upperAppliedVolts;
-        inputs.lowerVolts = -1 * lowerAppliedVolts;
+        inputs.frontVolts = frontAppliedVolts;
+        inputs.backVolts = -backAppliedVolts;
     }
 
     @Override
-    public void RunVolts(double upperVolts, double lowerVolts) {
-        upperAppliedVolts = upperVolts;
-        lowerAppliedVolts = lowerVolts;
+    public void RunVolts(double frontVolts, double backVolts) {
+        frontAppliedVolts = frontVolts;
+        backAppliedVolts = backVolts;
     }
 }
