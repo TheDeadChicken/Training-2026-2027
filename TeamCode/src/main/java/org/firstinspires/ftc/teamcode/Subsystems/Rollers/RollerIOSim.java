@@ -1,7 +1,7 @@
 public class RollerIOSim implements RollerIO {
     private double appliedVolts = 0;
 
-    public RollerIOSim() {}
+    public RollerIOSim(HardwareMap hardwareMap) {}
 
     @Override
     public void UpdateInputs(RollerIOInputs inputs) {
