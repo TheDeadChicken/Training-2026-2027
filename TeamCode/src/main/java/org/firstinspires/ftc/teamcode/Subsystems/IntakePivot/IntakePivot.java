@@ -9,4 +9,12 @@ public class IntakePivot extends SubsystemBase{
     public void Periodic(){
         io.UpdateInputs(inputs);
     }
+
+    public Command SetPivotPositionHigh(){
+        return run(() -> io.SetPivotPosition(0));
+    }
+    public Command SetPivotPositionLow(){
+        return run(() -> io.SetPivotPosition(1));
+    }
+
 }

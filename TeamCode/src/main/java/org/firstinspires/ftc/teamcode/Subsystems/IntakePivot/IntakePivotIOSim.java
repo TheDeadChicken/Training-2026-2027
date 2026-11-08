@@ -5,12 +5,12 @@ public class IntakePivotIOSim implements IntakePivotIO{
     public IntakePivotIOSim(HardwareMap hardwareMap){}
 
     @Override 
-    public void UpdatePivot(IntakePivotIOInputs inputs){
+    public void UpdateInputs(IntakePivotIOInputs inputs){
         inputs.pivotPosition = appliedPivotPosition;
     }
 
     @Override 
-    public void RunPivotPosition(double position){
+    public void SetPivotPosition(double position){
         appliedPivotPosition = position;
 
     }

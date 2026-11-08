@@ -4,9 +4,9 @@ public interface IntakePivotIO {
         public double pivotPosition;
     }
 
-    public default void UpdatePivot() {}
+    public default void UpdateInputs() {}
 
-    public default void RunPivotPosition() {}
+    public default void SetPivotPosition(double position) {}
 
 
 }
