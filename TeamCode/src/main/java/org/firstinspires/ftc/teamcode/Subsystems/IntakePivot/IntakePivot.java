@@ -11,10 +11,10 @@ public class IntakePivot extends SubsystemBase{
     }
 
     public Command SetPivotPositionHigh(){
-        return run(() -> io.SetPivotPosition(0));
+        return run(() -> io.SetPivotPosition(highPosition));
     }
     public Command SetPivotPositionLow(){
-        return run(() -> io.SetPivotPosition(1));
+        return run(() -> io.SetPivotPosition(lowPosition));
     }
 
 }
