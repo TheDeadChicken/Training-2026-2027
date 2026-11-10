@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.Subsystems.Rollers;
 public class RollerIOReal implements RollerIO{
     private DcMotor roller;
     
-    RollerIOReal(HardwareMap hardwareMap) {
+    //RollerIOReal(HardwareMap hardwareMap) {
         roller = hardwareMap.get(DcMotor.class, rollerID);
         roller.setDirection(DcMotor.Direction.FORWARD);
     }
