@@ -1,5 +1,5 @@
 public class IntakePivotIOReal implements IntakePivotIO {
-    //rename to please intakePivotMotor
+
     private Servo intakePivotMotor;
 
     IntakePivotIOReal(HardwareMap hardwareMap) {
