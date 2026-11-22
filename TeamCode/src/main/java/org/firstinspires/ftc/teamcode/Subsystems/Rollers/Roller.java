@@ -12,11 +12,11 @@ public class Roller extends SubsystemBase {
     }
 
     public Command RunVoltsFast() {
-        return run(()-> io.RunVolts(19, 19));
+        return run(()-> io.RunVolts(19));
     }
 
     public Command RunNoVolts() {
-        return run(()-> io.RunVolts(0, 0));
+        return run(()-> io.RunVolts(0));
     }
 
 
