@@ -1,7 +1,7 @@
 public interface HoodIO {
     @AutoLog
     public static class HoodIOInputs{
-        public double HoodPosition;
+        public double hoodPosition;
     }
 
     public default void UpdateInputs() {}
