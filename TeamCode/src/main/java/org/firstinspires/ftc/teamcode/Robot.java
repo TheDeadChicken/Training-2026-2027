@@ -26,6 +26,8 @@ public class Robot extends LinearOpMode {
 
     private IntakePivot intakePivot = new IntakePivot(new intakePivotIO());
 
+    private Flywheels flywheels = new Flywheels(new FlywheelsIO());
+
     
 
 
@@ -38,11 +40,13 @@ public class Robot extends LinearOpMode {
             case REAL:
                 roller = new Roller(RollerIOReal(hardwareMap));
                 intakePivot = new intakePivot(new intakePivotIOReal(hardwareMap));
+                flywheels = new Flywheels(new FlywheelsIOReal(hardwareMap));
                 break;
             case SIM:
                 roller = new Roller(RollerIOSim(hardwareMap));
                 intakePivot = new intakePivot(new intakePivotIOSim(hardwareMap));
 
+                flywheels = new Flywheels(new FlywheelsIOSim(hardwareMap));
                 break;
         }
 
