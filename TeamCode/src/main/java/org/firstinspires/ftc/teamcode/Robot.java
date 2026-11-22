@@ -60,7 +60,9 @@ public class Robot extends LinearOpMode {
 
         while (opModeIsActive()) {
             gamepad.getGamepadButton(GamepadKeys.Button.RIGHT_BUMPER).whileActiveContinuous(rollers.RunVolts());
-        }
+            gamepad.getGamepadButton(GamepadKeys.Button.LEFT_BUMPER).whileActiveContinuous(flywheels.RunVolts());
+
+        }  
     }
 }
 
