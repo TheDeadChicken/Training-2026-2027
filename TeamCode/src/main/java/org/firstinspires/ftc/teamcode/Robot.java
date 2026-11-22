@@ -28,6 +28,8 @@ public class Robot extends LinearOpMode {
 
     private Flywheels flywheels = new Flywheels(new FlywheelsIO());
 
+    private Hood hood = new Hood(new HoodIO());
+
     
 
 
@@ -41,18 +43,21 @@ public class Robot extends LinearOpMode {
                 roller = new Roller(RollerIOReal(hardwareMap));
                 intakePivot = new intakePivot(new intakePivotIOReal(hardwareMap));
                 flywheels = new Flywheels(new FlywheelsIOReal(hardwareMap));
+                hood = new Hood(new HoodIOReal(hardwareMap));
                 break;
             case SIM:
                 roller = new Roller(RollerIOSim(hardwareMap));
                 intakePivot = new intakePivot(new intakePivotIOSim(hardwareMap));
-
                 flywheels = new Flywheels(new FlywheelsIOSim(hardwareMap));
+                hood = new Hood(new HoodIOSim(hardwareMap));
+
                 break;
         }
 
         roller.SetDefaultCommand(roller.RunNoVolts());
         flywheels.SetDefaultCommand(flywheels.stopFlywheels());
         intakePivot.SetDefaultCommand(intakePivot.HoldIntakePivotPosition());
+        hood.SetDefaultCommand(hood.HoldHoodPosition());
 
         waitForStart();
         runtime.reset();
