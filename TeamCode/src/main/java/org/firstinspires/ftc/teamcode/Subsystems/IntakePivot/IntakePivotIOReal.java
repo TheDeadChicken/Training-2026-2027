@@ -1,20 +1,20 @@
 public class IntakePivotIOReal implements IntakePivotIO {
     //rename to please intakePivotMotor
-    private Servo intakeMotor;
+    private Servo intakePivotMotor;
 
     IntakePivotIOReal(HardwareMap hardwareMap) {
-        intakeMotor = hardware.get(Servo.class, "intakeServo");
-        intakeMotor.setPosition(highPivotPosition);
+        intakePivotMotor = hardware.get(Servo.class, "intakeServo");
+        intakePivotMotor.setPosition(highPivotPosition);
     }
 
     @Override
     public void UpdateInputs(IntakePivotIOInputs inputs) {
-        inputs.pivotPosition = intakeMotor.getPosition();
+        inputs.pivotPosition = intakePivotMotor.getPosition();
     }
 
     @Override
     public void SetPivotPosition(double position) {
-        intakeMotor.setPosition(position);
+        intakePivotMotor.setPosition(position);
     }
 
 }
