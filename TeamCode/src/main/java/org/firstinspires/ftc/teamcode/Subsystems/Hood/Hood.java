@@ -18,7 +18,7 @@ public class Hood extends SubsystemBase {
     }
 
 
-    public Command HoldIntakeHoodPosition(){
+    public Command HoldHoodPosition(){
         return run(() -> io.SetHoodPosition(targetHoodPosition));
     }
 }
