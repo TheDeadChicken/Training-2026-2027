@@ -51,7 +51,7 @@ public class Robot extends LinearOpMode {
         }
 
         roller.SetDefaultCommand(roller.RunNoVolts());
-        flywheels.SetDefaultCommand(flywheels.RunNoVolts());
+        flywheels.SetDefaultCommand(flywheels.stopFlywheels());
 
         waitForStart();
         runtime.reset();

@@ -15,8 +15,7 @@ public class Flywheels extends Subsytems {
         return run(()-> io.RunVolts(19, 19));
     }
 
-    // Rename to stop Flywheels
-    public Command runNoVolts(){
+    public Command stopFlywheels(){
         return run(()-> io.RunVolts(0, 0));
     }
 }
