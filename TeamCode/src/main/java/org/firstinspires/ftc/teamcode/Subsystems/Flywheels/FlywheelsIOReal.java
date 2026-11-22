@@ -5,10 +5,11 @@ public class FlywheelsIOReal implements FlywheelsIO {
     FlywheelsIOReal(HardwareMap hardwareMap) {
         // Reorder so that the directions and maps are together with 1 enter betwean them
         frontFlywheel = hardwareMap.get(DcMotor.class, frontFlywheelID);
-        frontFlywheel.setDirection(DcMotor.Direction.FORWARD);
-
         backFlywheel = hardwareMap.get(DcMotor.class, backFlywheelID);
+    
+        frontFlywheel.setDirection(DcMotor.Direction.FORWARD);
         backFlywheel.setDirection(DcMotor.Direction.FORWARD);
+        
     }
 
     @Override 
