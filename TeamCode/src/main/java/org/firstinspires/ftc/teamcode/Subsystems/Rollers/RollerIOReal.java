@@ -1,21 +1,27 @@
 package org.firstinspires.ftc.teamcode.Subsystems.Rollers;
 
 public class RollerIOReal implements RollerIO{
-    private DcMotor roller;
+    private DcMotor leftRoller;
+    private DcMotor rightRoller;
     
     RollerIOReal(HardwareMap hardwareMap) {
-        roller = hardwareMap.get(DcMotor.class, rollerID);
-        roller.setDirection(DcMotor.Direction.FORWARD);
+        leftRoller = hardwareMap.get(DcMotor.class, leftRollerID);
+        rightRoller = hardwareMap.get(DcMotor.class, rightRollerID);
+
+        leftRoller.setDirection(DcMotor.Direction.FORWARD);
+        rightRoller.setDirection(DcMotor.Direction.REVERSE);
     }
 
     @Override 
     public void UpdateInputs(RollerIOInputs inputs) {
-        inputs.volts = roller.getPower();
+        inputs.leftVolts = leftRoller.getPower();
+        inputs.rightVolts = rightRoller.getPower();
     }
 
     @Override
     public void RunVolts(double volts) {
-        rollers.setPower(volts);
+        leftRoller.setPower(volts);
+        rightRoller.setPower(volts);
     }
 
 
