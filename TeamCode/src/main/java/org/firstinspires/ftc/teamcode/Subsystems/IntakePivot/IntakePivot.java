@@ -1,7 +1,7 @@
 public class IntakePivot extends SubsystemBase{
     private final IntakePivotIO io;
     private final IntakePivotIOInputsAutoLogged inputs = new IntakePivotIOInputsAutoLogged();
-    double targetPosition = highPivotPosition;
+    double targetIntakePivotPosition = highPivotPosition;
     
     public IntakePivot(IntakePivotIO io){
         this.io = io;
@@ -13,15 +13,15 @@ public class IntakePivot extends SubsystemBase{
 
     public Command SetPivotPositionHigh(){
         return run(() -> io.SetPivotPosition(highPosition));
-        targetPosition = highPosition;
+        targetIntakePivotPosition = highPosition;
 
     }
     public Command SetPivotPositionLow(){
         return run(() -> io.SetPivotPosition(lowPosition));
-        targetPosition = lowPosition;
+        targetIntakePivotPosition = lowPosition;
     }
 
     public Command HoldIntakePivotPosition(){
-        return run(() -> io.SetPivotPosition(targetPosition));
+        return run(() -> io.SetPivotPosition(targetIntakePivotPosition));
     }
 }
