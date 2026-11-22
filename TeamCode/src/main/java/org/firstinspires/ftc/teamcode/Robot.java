@@ -24,6 +24,8 @@ public class Robot extends LinearOpMode {
 
     private Roller roller = new Roller(rollerIO());
 
+    private IntakePivotMotor intakePivotMotor = new IntakePivot(intakePivotIO());
+
     
 
 
