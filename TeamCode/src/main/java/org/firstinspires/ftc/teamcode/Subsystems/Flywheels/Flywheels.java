@@ -10,10 +10,12 @@ public class Flywheels extends Subsytems {
         io.updateInputs(inputs);
     }
 
+    // For now rename to RunFlywheels and use a constant instead of the magic number  
     public Command runVoltsFast(){
         return run(()-> io.RunVolts(19, 19));
     }
 
+    // Rename to stop Flywheels
     public Command runNoVolts(){
         return run(()-> io.RunVolts(0, 0));
     }
