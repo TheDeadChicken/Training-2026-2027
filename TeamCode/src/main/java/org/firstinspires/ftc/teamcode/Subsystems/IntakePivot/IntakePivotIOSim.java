@@ -1,5 +1,5 @@
 public class IntakePivotIOSim implements IntakePivotIO{
-    private double appliedPivotPosition = 0;
+    private double appliedPivotPosition = highPivotPosition;
 
 
     public IntakePivotIOSim(HardwareMap hardwareMap){}

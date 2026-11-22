@@ -7,6 +7,7 @@ public interface IntakePivotIO {
     public default void UpdateInputs() {}
 
     public default void SetPivotPosition(double position) {}
+    
 
 
 }
