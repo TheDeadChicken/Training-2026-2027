@@ -24,7 +24,7 @@ public class Robot extends LinearOpMode {
 
     private Roller roller = new Roller(rollerIO());
 
-    private IntakePivotMotor intakePivotMotor = new IntakePivot(new intakePivotIO());
+    private IntakePivotMotor intakePivot = new IntakePivot(new intakePivotIO());
 
     
 
@@ -37,9 +37,12 @@ public class Robot extends LinearOpMode {
         switch(Constants.currentMode) {
             case REAL:
                 roller = new Roller(RollerIOReal(hardwareMap));
+                intakePivot = new intakePivot(new intakePivotIOReal(hardwareMap));
                 break;
             case SIM:
                 roller = new Roller(RollerIOSim(hardwareMap));
+                intakePivot = new intakePivot(new intakePivotIOSim(hardwareMap));
+
                 break;
         }
 
